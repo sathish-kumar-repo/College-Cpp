@@ -1,3 +1,5 @@
+// 1. To calculate simple interest and compound interest
+
 #include <iostream>
 #include <cmath> // For pow() function
 

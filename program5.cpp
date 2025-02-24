@@ -1,35 +1,34 @@
+// 5. Write a c++ program to create a class and access member fuction of a class
+
 #include <iostream>
+// #include <conio>
+
 using namespace std;
 
-void generateFibonacci(int n)
+class Student
 {
-    int t1 = 0, t2 = 1, nextTerm;
+private:
+    int sno;
+    int m1, m2;
 
-    cout << "Fibonacci Series: ";
-    for (int i = 1; i <= n; ++i)
+public:
+    void getdata()
     {
-        cout << t1 << " ";
-        nextTerm = t1 + t2;
-        t1 = t2;
-        t2 = nextTerm;
+        cin >> sno;
+        cin >> m1;
+        cin >> m2;
     }
-    cout << endl;
-}
+    void putdata()
+    {
+        cout << sno << endl;
+        cout << m1 << endl;
+        cout << m2 << endl;
+    }
+};
 
 int main()
 {
-    int n;
-    cout << "Enter the number of terms: ";
-    cin >> n;
-
-    if (n <= 0)
-    {
-        cout << "Please enter a positive integer." << endl;
-    }
-    else
-    {
-        generateFibonacci(n);
-    }
-
-    //     return 0;
+    Student s;
+    s.getdata();
+    s.putdata();
 }
