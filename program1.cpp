@@ -8,27 +8,27 @@ using namespace std;
 int main()
 {
     // Variables for input
-    double principal, rate, time;
+    double p, r, n;
 
     // Input principal, rate of interest, and time
     cout << "Enter the principal amount: ";
-    cin >> principal;
+    cin >> p;
 
     cout << "Enter the annual interest rate (in %): ";
-    cin >> rate;
+    cin >> r;
 
     cout << "Enter the time (in years): ";
-    cin >> time;
+    cin >> n;
 
     // Calculate Simple Interest
-    double simpleInterest = (principal * rate * time) / 100;
+    double SI = (p * r * n) / 100;
 
     // Calculate Compound Interest
-    double compoundInterest = principal * pow((1 + rate / 100), time) - principal;
+    double CI = p * pow((1 + r / 100), n) - p;
 
     // Output the results
-    cout << "\nSimple Interest: " << simpleInterest << endl;
-    cout << "Compound Interest: " << compoundInterest << endl;
+    cout << "\nSimple Interest: " << SI << endl;
+    cout << "Compound Interest: " << CI << endl;
 
     // return 0;
 }
