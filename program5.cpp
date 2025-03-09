@@ -1,34 +1,32 @@
 // 5. Write a c++ program to create a class and access member fuction of a class
-
 #include <iostream>
-// #include <conio>
+#include <string>
 
 using namespace std;
 
-class Student
+class MyClass
 {
 private:
-    int sno;
-    int m1, m2;
+    string name;
 
 public:
-    void getdata()
+    MyClass(string n)
     {
-        cin >> sno;
-        cin >> m1;
-        cin >> m2;
+        name = n;
     }
-    void putdata()
+
+    void greet()
     {
-        cout << sno << endl;
-        cout << m1 << endl;
-        cout << m2 << endl;
+        cout << "Hello, " << name << "!" << endl;
     }
 };
 
 int main()
 {
-    Student s;
-    s.getdata();
-    s.putdata();
+
+    MyClass myObject("mku college");
+
+    myObject.greet();
+
+    //     return 0;
 }
