@@ -1,4 +1,4 @@
-
+// Alternative program for program 5
 
 #include <iostream>
 

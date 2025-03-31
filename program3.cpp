@@ -1,5 +1,7 @@
 // 3. Display the elements of array in sort order
+
 #include <iostream>
+
 using namespace std;
 
 int main()
@@ -10,8 +12,7 @@ int main()
     int size = sizeof(arr) / sizeof(arr[0]);
 
     // Display the elements of the array
-    cout
-        << "The elements of the array are: ";
+    cout << "The elements of the array are: ";
 
     for (int i = 0; i < size; i++)
     {

@@ -1,4 +1,7 @@
+// Another method of program 4
+
 #include <iostream>
+
 using namespace std;
 
 void generateFibonacci(int n)
