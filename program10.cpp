@@ -1,26 +1,34 @@
+// Sum of digits
+
 #include <iostream>
 
 using namespace std;
 
-int sumofdigit(int num1 = 1234) // Function now returns an int
+int sumOfDigits(int n)
 {
-    int r, sum = 0;
-    while (num1 > 0)
+    int sum = 0;
+    while (n > 0)
     {
-        r = num1 % 10;
-        num1 = num1 / 10;
-        sum = sum + r;
+        sum += n % 10; // Extract last digit and add to sum
+        n /= 10;       // Remove last digit
     }
-    return sum; // Return sum instead of printing inside function
+    return sum;
 }
 
 int main()
 {
-    cout << "\n\n Find the sum of digits of a given number:\n";
-    cout << "----------------------------------------------\n";
-    int num = 1234;               // Define the number
-    int result = sumofdigit(num); // Store the returned sum
+    int num;
+    cout << "Enter a number: ";
+    cin >> num;
 
-    cout << " The sum of digits of " << num << " is: " << result << endl;
-    return 0; // Return 0 to indicate successful execution
+    if (num < 0)
+    {
+        cout << "Please enter a positive number." << endl;
+    }
+    else
+    {
+        cout << "Sum of digits: " << sumOfDigits(num) << endl;
+    }
+
+    return 0;
 }
